@@ -20,5 +20,15 @@
   <%= @author.nickname %>
 </p>
 
+<p>
+  <strong>Hometown:</strong>
+  <%= @author.hometown %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @author.age %>
+</p>
+
 <%= link_to 'Edit', edit_author_path(@author) %> |
 <%= link_to 'Back', authors_path %>

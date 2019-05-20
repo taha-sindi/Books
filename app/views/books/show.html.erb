@@ -1,11 +1,10 @@
-<p> 
-<%=link_to "back",books_path %>
-</p>
 <h1>
 <%= @book.title %>
+<%= @book.print_date %>
+<%= @book.original_language %>
 </h1>
 
-<p>
-<%= link_to'Edit', edit_book_path(@book)%>
-<%= link_to'Destroy this book!', book_path(@book), method: :delete %>
-</p>
+<p> <%= link_to "Back", author_books_path(@author) %> </p>
+<p> <%= link_to 'View Books', author_books_path(@author) %> </p>
+<p> <%= link_to 'Edit', edit_author_book_path(@author, @book) %> </p>
+<p> <%= link_to 'Destroy this book!', author_book_path(@author, @book), method: :delete %> </p>
